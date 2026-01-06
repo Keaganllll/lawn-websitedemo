@@ -24,11 +24,11 @@
       width:100%;margin-top:.2rem;padding:.5rem;border-radius:8px;border:1px solid #d1d5db;
       font-size:.9rem;background:#fff;
     }
-    .btn{padding:.6rem 1.1rem;border-radius:999px;border:none;cursor:pointer;font-weight:600;background:var(--gold);width:100%;margin-top:.7rem}
-    .success{
-      display:none;margin-top:.6rem;padding:.6rem;border-radius:8px;
-      background:#e7f7eb;border:1px solid #b7e0c1;color:#14532d;font-size:.85rem;
+    .btn{
+      padding:.6rem 1.1rem;border-radius:999px;border:none;cursor:pointer;
+      font-weight:600;background:var(--gold);width:100%;margin-top:.7rem
     }
+    .note{font-size:.8rem;color:#6b7280;margin-top:.5rem}
     footer{text-align:center;padding:1rem;font-size:.8rem;background:#0f172a;color:#e5e7eb;margin-top:1.5rem}
   </style>
 </head>
@@ -52,24 +52,29 @@
   <div class="container">
     <h1>Schedule a Lawn Visit</h1>
     <p style="font-size:.9rem;color:#4b5563;">
-      This form is a demo — it doesn’t send email yet, but shows what a real booking form would look like.
+      Fill this out to request a visit. Your message will be emailed directly to us.
     </p>
 
-    <form onsubmit="handleSubmit(event)">
+    <!-- Connected to Formspree -->
+    <form action="https://formspree.io/f/mdakrwav" method="POST">
       <label>Name
-        <input type="text" required />
+        <input type="text" name="name" required />
       </label>
+
       <label>Phone
-        <input type="tel" required />
+        <input type="tel" name="phone" required />
       </label>
+
       <label>Email
-        <input type="email" />
+        <input type="email" name="email" required />
       </label>
+
       <label>Address (Wichita area)
-        <input type="text" />
+        <input type="text" name="address" />
       </label>
+
       <label>Service
-        <select required>
+        <select name="service" required>
           <option value="">Choose…</option>
           <option>Standard Mowing</option>
           <option>Seasonal Cleanup</option>
@@ -77,30 +82,29 @@
           <option>Full Season Package</option>
         </select>
       </label>
+
       <label>Preferred day
-        <input type="date" />
+        <input type="date" name="date" />
       </label>
+
       <label>Notes
-        <textarea rows="3" placeholder="Gate code, pets, yard size, special requests…"></textarea>
+        <textarea name="message" rows="3" placeholder="Gate code, pets, yard size, special requests…"></textarea>
       </label>
 
-      <button class="btn">Request Appointment (Demo)</button>
+      <button class="btn">Request Appointment</button>
 
-      <div class="success" id="successBox">
-        Thanks! Your request was recorded (demo only). In a real site, this would be sent to the lawn care company.
-      </div>
+      <p class="note">
+        Powered by Formspree — for demo/testing only. You can customize the thank-you page later.
+      </p>
     </form>
   </div>
 </section>
 
 <footer>
-  Demo schedule page — hook this form up to email or booking software later.
+  Demo schedule page — hooked up to email via Formspree.
 </footer>
-
-<script>
-function handleSubmit(e){
-  e.preventDefault();
-  document.getElementById('successBox').style.display = 'block';
+</body>
+</html>
 }
 </script>
 </body>
