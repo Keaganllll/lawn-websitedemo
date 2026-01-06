@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery | Heartland Lawn Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root{--green:#2d6a4f;--blue:#1d3557;--gold:#ffb703;--bg:#f5f3ed;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,Segoe UI,Arial;background:var(--bg);color:#102a43;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    header{background:linear-gradient(135deg,var(--green),var(--blue));color:#fff}
+    .container{max-width:1100px;margin:auto;padding:1rem}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:.75rem}
+    nav .brand{font-weight:700}
+    nav .links{display:flex;gap:.75rem;font-size:.9rem;flex-wrap:wrap}
+    nav .links a{padding:.2rem .4rem;border-radius:999px}
+    nav .links a.active{background:rgba(0,0,0,.2)}
+    section{padding:2rem 1rem}
+    h1{font-size:1.7rem;margin-bottom:.4rem}
+    .grid{display:grid;gap:1rem;margin-top:1rem}
+    .card{background:#fff;padding:1rem;border-radius:14px;border:1px solid #e5e7eb}
+    .placeholder{
+      border:2px dashed #9ca3af;border-radius:12px;height:150px;
+      display:flex;align-items:center;justify-content:center;
+      background:#f3f4f6;font-size:.9rem;color:#374151;text-align:center;padding:.5rem;
+    }
+    footer{text-align:center;padding:1rem;font-size:.8rem;background:#0f172a;color:#e5e7eb;margin-top:1.5rem}
+    @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">Heartland Lawn Services</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h1>Lawn Gallery</h1>
+    <p style="font-size:.9rem;color:#4b5563;">
+      These boxes are placeholders where a real business would upload before & after lawn photos.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="placeholder">
+          BEFORE photo<br>Example: overgrown front yard in Wichita.
+        </div>
+        <small>“Before first visit — grass tall and uneven.”</small>
+      </div>
+
+      <div class="card">
+        <div class="placeholder">
+          AFTER photo<br>Example: fresh mow with clean edges.
+        </div>
+        <small>“Same yard after standard mowing & edging.”</small>
+      </div>
+
+      <div class="card">
+        <div class="placeholder">
+          Seasonal cleanup photo<br>Example: leaf removal.
+        </div>
+        <small>“Backyard after fall cleanup and leaf bagging.”</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Demo gallery page — replace placeholders with real lawn photos.
+</footer>
+</body>
+</html>

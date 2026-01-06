@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Schedule | Heartland Lawn Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root{--green:#2d6a4f;--blue:#1d3557;--gold:#ffb703;--bg:#f5f3ed;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,Segoe UI,Arial;background:var(--bg);color:#102a43;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    header{background:linear-gradient(135deg,var(--green),var(--blue));color:#fff}
+    .container{max-width:1100px;margin:auto;padding:1rem}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:.75rem}
+    nav .brand{font-weight:700}
+    nav .links{display:flex;gap:.75rem;font-size:.9rem;flex-wrap:wrap}
+    nav .links a{padding:.2rem .4rem;border-radius:999px}
+    nav .links a.active{background:rgba(0,0,0,.2)}
+    section{padding:2rem 1rem}
+    h1{font-size:1.7rem;margin-bottom:.4rem}
+    form{background:#fff;padding:1rem;border-radius:14px;border:1px solid #e5e7eb;margin-top:1rem}
+    label{font-size:.9rem;display:block;margin-top:.4rem}
+    input,select,textarea{
+      width:100%;margin-top:.2rem;padding:.5rem;border-radius:8px;border:1px solid #d1d5db;
+      font-size:.9rem;background:#fff;
+    }
+    .btn{padding:.6rem 1.1rem;border-radius:999px;border:none;cursor:pointer;font-weight:600;background:var(--gold);width:100%;margin-top:.7rem}
+    .success{
+      display:none;margin-top:.6rem;padding:.6rem;border-radius:8px;
+      background:#e7f7eb;border:1px solid #b7e0c1;color:#14532d;font-size:.85rem;
+    }
+    footer{text-align:center;padding:1rem;font-size:.8rem;background:#0f172a;color:#e5e7eb;margin-top:1.5rem}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">Heartland Lawn Services</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="schedule.html" class="active">Schedule</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h1>Schedule a Lawn Visit</h1>
+    <p style="font-size:.9rem;color:#4b5563;">
+      This form is a demo — it doesn’t send email yet, but shows what a real booking form would look like.
+    </p>
+
+    <form onsubmit="handleSubmit(event)">
+      <label>Name
+        <input type="text" required />
+      </label>
+      <label>Phone
+        <input type="tel" required />
+      </label>
+      <label>Email
+        <input type="email" />
+      </label>
+      <label>Address (Wichita area)
+        <input type="text" />
+      </label>
+      <label>Service
+        <select required>
+          <option value="">Choose…</option>
+          <option>Standard Mowing</option>
+          <option>Seasonal Cleanup</option>
+          <option>Trim & Edge</option>
+          <option>Full Season Package</option>
+        </select>
+      </label>
+      <label>Preferred day
+        <input type="date" />
+      </label>
+      <label>Notes
+        <textarea rows="3" placeholder="Gate code, pets, yard size, special requests…"></textarea>
+      </label>
+
+      <button class="btn">Request Appointment (Demo)</button>
+
+      <div class="success" id="successBox">
+        Thanks! Your request was recorded (demo only). In a real site, this would be sent to the lawn care company.
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  Demo schedule page — hook this form up to email or booking software later.
+</footer>
+
+<script>
+function handleSubmit(e){
+  e.preventDefault();
+  document.getElementById('successBox').style.display = 'block';
+}
+</script>
+</body>
+</html>

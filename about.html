@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Heartland Lawn Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root{--green:#2d6a4f;--blue:#1d3557;--gold:#ffb703;--bg:#f5f3ed;}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,Segoe UI,Arial;background:var(--bg);color:#102a43;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    header{background:linear-gradient(135deg,var(--green),var(--blue));color:#fff}
+    .container{max-width:1100px;margin:auto;padding:1rem}
+    nav{display:flex;justify-content:space-between;align-items:center;gap:.75rem}
+    nav .brand{font-weight:700}
+    nav .links{display:flex;gap:.75rem;font-size:.9rem;flex-wrap:wrap}
+    nav .links a{padding:.2rem .4rem;border-radius:999px}
+    nav .links a.active{background:rgba(0,0,0,.2)}
+    section{padding:2rem 1rem}
+    h1{font-size:1.7rem;margin-bottom:.4rem}
+    .grid{display:grid;gap:1rem;margin-top:1rem}
+    .card{background:#fff;padding:1rem;border-radius:14px;border:1px solid #e5e7eb}
+    footer{text-align:center;padding:1rem;font-size:.8rem;background:#0f172a;color:#e5e7eb;margin-top:1.5rem}
+    @media(min-width:768px){.grid-2{grid-template-columns:2fr 1fr}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">Heartland Lawn Services</div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="about.html" class="active">About</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h1>About Heartland Lawn Services</h1>
+    <div class="grid grid-2">
+      <div class="card">
+        <h2>Our story (demo text)</h2>
+        <p>
+          Heartland Lawn Services is a demo name for a Wichita lawn care company. On a real site,
+          this section would talk about how the business started, how long they’ve served Wichita,
+          and what they care about.
+        </p>
+        <p>
+          Many homeowners just want someone dependable who shows up on time, communicates clearly,
+          and takes pride in the details. This is where the company can explain how they do that.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Contact info (placeholders)</h2>
+        <p><strong>Phone:</strong> (000) 000-0000</p>
+        <p><strong>Email:</strong> info@heartlandlawnservices.com</p>
+        <p><strong>Service area:</strong> Wichita, KS and nearby communities.</p>
+        <p style="font-size:.8rem;color:#6b7280;margin-top:.4rem;">
+          These are not real contact details — replace them with the actual business info.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Demo about page — customize with real story and contact details.
+</footer>
+</body>
+</html>
